@@ -1,0 +1,20 @@
+{
+    "executionRoleArn": "arn:aws:iam::596000239556:role/ecsTaskExecutionRole",
+    "containerDefinitions": [{
+      "name": "my-angular-app",
+      "image": "596000239556.dkr.ecr.us-east-1.amazonaws.com/my-angular-app:latest",
+      "essential": true,
+      "portMappings": [{
+        "hostPort": 80,
+        "protocol": "tcp",
+        "containerPort": 80
+      }]
+    }],
+    "requiresCompatibilities": [
+      "FARGATE"
+    ],
+    "networkMode": "awsvpc",
+    "cpu": "256",
+    "memory": "512",
+    "family": "my-angular-app"
+  }
